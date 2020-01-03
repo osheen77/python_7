@@ -163,7 +163,7 @@ while poll_active:
     responses[name]=response
 
     print("\n continue poll ")
-    repeat=input("say yes\no ")
+    repeat=input("say yes or no ")
     if repeat == 'no':
         poll_active= False
 
@@ -171,9 +171,71 @@ for name,response in responses.items():
     print(name.title() + " would like to have number " + response)
 
 
-####Dictionary for  the input of list####
+####Dictionary for  the input of list####\
+
+print("\n 7.8 Deli")
+sandwich_orders = ['tuna', 'chicken', 'beef','pork']
+finished_sandwich=[]
+
+while sandwich_orders:
+    working_sandwich=sandwich_orders.pop()
+
+    print("The order for the " + working_sandwich + " is taken")
+    finished_sandwich.append(working_sandwich)
+    
+for user in finished_sandwich:
+
+    print("\nThe order for " + user + " is ready. ")
+    
+print("\nThese sandwiches are made: ")
+for user in finished_sandwich:
+    print(user)
 
 
+################################################################
+print("\n 7.9")
 
+sandwich_available = ['tuna','pastrami', 'chicken','pastrami', 'beef','pastrami'
+                      ,'pork']
+finished_sandwich=[]
 
+print(sandwich_available)
+print ("Deli has run out of patrami ")
+
+while 'pastrami' in sandwich_available:
+    sandwich_available.remove('pastrami')
+print("Now avaialble: ")
+print(sandwich_available)
+    
+
+while sandwich_available:
+    working_sandwich=sandwich_available.pop()
+
+    print("The order for the " + working_sandwich + " is taken")
+    finished_sandwich.append(working_sandwich)
+        
+print("\nThese sandwiches are made: ")
+for user in finished_sandwich:
+    print(user)
+    
+#########################################################
+print("\n 7.10")
+
+print("places to visit")
+answers={}
+poll_active=True
+
+while poll_active:
+    name=input("\nname of the participant ")
+    place=input("place that you would like to visit ")
+
+    answers[name]=place
+    print("Would you like to add more ")
+    new=input("any new place ")
+    if new == 'no':
+        poll_active=False
+
+for name,place in answers.items():
+    print(name.title() + " would like to visit " + place + ".")
+    
     
